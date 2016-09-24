@@ -1,15 +1,19 @@
 {
   "name": "snorlax",
   "version": "0.1.0",
-  "description": "",
+  "description": "An slack bot for Shinjuku.LT",
   "main": "bot.js",
   "scripts": {
     "start": "node ./bot.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["slack", "bot"],
+  "author": "honmaso@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.1.1"
-  }
+    "botkit": "howdyai/botkit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HomMarkHunt/snorlax.git"
+	}
 }
