@@ -2,9 +2,9 @@
   "name": "snorlax",
   "version": "0.1.0",
   "description": "An slack bot for Shinjuku.LT",
-  "main": "bot.js",
+  "main": "./bin/index.js",
   "scripts": {
-    "start": "node ./bot.js"
+    "start": "node ./bin/index.js"
   },
   "keywords": ["slack", "bot"],
   "author": "honmaso@gmail.com",
