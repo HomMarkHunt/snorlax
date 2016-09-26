@@ -1,6 +1,6 @@
-var Botkit = require('../lib/Botkit.js');
-var Fs = require('fs');
-var Path = require('path');
+const Botkit = require('../lib/Botkit.js');
+const Fs = require('fs');
+const Path = require('path');
 
 controller = Botkit.slackbot({
   debug: false
@@ -10,12 +10,12 @@ controller.spawn({
   token: process.env.token
 }).startRTM();
 
-var load = function(path, file) {
-  var ext = Path.extname(file);
-  var full = Path.join(path, Path.basename(file, ext));
+const load = (path, file) => {
+  const ext = Path.extname(file);
+  const full = Path.join(path, Path.basename(file, ext));
 
   try {
-    var script = require(full);
+    const script = require(full);
     if (typeof script === 'function') {
       script(this);
     }
@@ -24,8 +24,8 @@ var load = function(path, file) {
   }
 };
 
-var path = Path.resolve('.', 'scripts')
+const path = Path.resolve('.', 'scripts')
 
-Fs.readdirSync(path).sort().forEach(function(file) {
+Fs.readdirSync(path).sort().forEach(file => {
   load(path, file);
 });
